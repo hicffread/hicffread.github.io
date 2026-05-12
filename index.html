@@ -1,310 +1,130 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timi Aov - Designer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>/        /* Hiệu ứng sấm sét chớp nháy */
-        .lightning-flash {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            opacity: 0;
-            z-index: 10000;
-            pointer-events: none;
-        }
-
-        @keyframes lightning-anim {
-            0% { opacity: 0; }
-            10% { opacity: 0.5; }
-            15% { opacity: 0; }
-            20% { opacity: 0.7; }
-            25% { opacity: 0; }
-            100% { opacity: 0; }
-        }
-
-        .flash-active {
-            animation: lightning-anim 0.4s ease-out;
-        }
-
-        :root {
-            --primary-bg: #f8f9ff;
-            --text-main: #333;
-            --text-sub: #666;
-            --accent-color: #6366f1;
-            --card-bg: #ffffff;
-            --download-icon-color: #e082ff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--primary-bg);
-            margin: 0;
-            padding: 0;
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .header {
-            text-align: center;
-            padding: 40px 20px 10px 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .avatar {
-            width: 95px;
-            height: 95px;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-
-        .name {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 5px 0;
-            line-height: 1.2;
-        }
-
-        .verified-icon {
-            color: #1d9bf0;
-            font-size: 18px;
-            margin-left: 3px;
-        }
-
-        .title {
-            color: var(--text-sub);
-            font-size: 16px;
-            margin-bottom: 25px;
-        }
-
-        .title span {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            margin-bottom: 30px;
-        }
-
-        .social-btn {
-            width: 48px;
-            height: 48px;
-            background: white;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            text-decoration: none;
-        }
-
-        .social-btn i { font-size: 24px; }
-        .yt { color: #ff0000; }
-        .zl { color: #0068ff; font-weight: 800; font-size: 14px !important; }
-        .tg { color: #229ed9; }
-
-        .section-title {
-            font-size: 19px;
-            font-weight: 700;
-            margin: 25px 0 15px 0;
-            width: 100%;
-            text-align: center;
-            color: #444;
-        }
-
-        .list-container {
-            width: 92%;
-            max-width: 480px;
-            margin-bottom: 50px;
-        }
-
-        .item-card {
-            background: var(--card-bg);
-            border-radius: 18px;
-            padding: 14px 18px;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .item-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-
-        .item-info {
-            flex-grow: 1;
-        }
-
-        .item-name {
-            font-size: 15px;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .item-date {
-            font-size: 11px;
-            color: #aaa;
-        }
-
-        .download-icon {
-            color: var(--download-icon-color);
-            font-size: 22px;
-        }
-
-        .folder-icon-box {
-            width: 48px;
-            height: 48px;
-            background: #ffeaa7;
-            border-radius: 12px;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .folder-icon-box i { color: #fdcb6e; font-size: 24px; }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TimiAov</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="NTDShare" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://bio.ntdsharehax.top/" />
+    <link rel="icon" href="https://bio.ntdsharehax.top/uploads/intro/1777981634_z7794054491863_13d5fcb78fdb2aed91d07057249884d6.jpg" type="image/png" />
+    <link rel="shortcut icon" href="https://bio.ntdsharehax.top/uploads/intro/1777981634_z7794054491863_13d5fcb78fdb2aed91d07057249884d6.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://bio.ntdsharehax.top/uploads/intro/1777981634_z7794054491863_13d5fcb78fdb2aed91d07057249884d6.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="vthangios" />
+    <meta property="og:url" content="https://bio.ntdsharehax.top/" />
+    <meta property="og:title" content="NTDShare" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="vthangios" />
+    <meta name="twitter:description" content="" />
+    <link rel="preload" as="image" href="https://bio.ntdsharehax.top/uploads/intro/1777981634_z7794052116676_829840da0110c3a0c22effe752e16a45.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="https://bio.ntdsharehax.top/uploads/intro/1777981634_khungavt.png" fetchpriority="high" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://bio.ntdsharehax.top/assets/css/style.css?v=1777269596" />
 </head>
 <body>
-
-    <div class="header">
-        <img src="https://i.ibb.co/PZ7dxKnz/IMG-1048.png" alt="Avatar" class="avatar">
-        <div class="name">TimiAov<i class="fas fa-check-circle verified-icon"></i></div>
-        <div class="title">Wedsite <span>ModHack.</span></div>
-    </div>
-
-    <div class="social-icons">
-        <a href="https://youtube.com/@timiaov" class="social-btn yt"><i class="fab fa-youtube"></i></a>
-        <a href="https://zalo.me/g/zvlhciob88lr3muvqw9l" class="social-btn zl">Zalo</a>
-        <a href="https://t.me/HackTimiAov" class="social-btn tg"><i class="fab fa-telegram-plane"></i></a>
-    </div>
-
-    <div class="list-container">
-        <div class="section-title">Tải Game</div>
-        
-        <a href="https://appvn.one/nzSshi" class="item-card">
-            <img src="https://i.ibb.co/hFpCLnf0/IMG-1077.jpg" class="item-icon">
-            <div class="item-info">
-                <span class="item-name">Menu Hack Map IOS</span>
-                <span class="item-date real-date">Đang cập nhật...</span>
+    <main role="main">
+        <nav class="ios-nav">
+            <div class="menu-toggle" onclick="location.reload()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <i class="fas fa-cloud-download-alt download-icon"></i>
-        </a>
-        <a href="https://note2s.net/notes/JXN5Z0" class="item-card">
-            <img src="https://i.ibb.co/hFpCLnf0/IMG-1077.jpg" class="item-icon">
-            <div class="item-info">
-                <span class="item-name">Menu Hack Map Android</span>
-                <span class="item-date real-date">Đang cập nhật...</span>
-            </div>
-            <i class="fas fa-cloud-download-alt download-icon"></i>
-        </a>
-        <div class="section-title">Get Key IOS <i class="fas fa-spinner fa-spin" style="font-size: 14px; color: #ccc;"></i></div>
-
-        <a href="https://vuotnhanh.com/TIMIHAXIOS" class="item-card">
-            <img src="https://i.ibb.co/hFpCLnf0/IMG-1077.jpg" class="item-icon">
-            <div class="item-info">
-                <span class="item-name">Key Hack Map AOV</span>
-                <span id="key-time" class="item-date">Đang lấy thời gian...</span>
-            </div>
-            <i class="fas fa-cloud-download-alt download-icon"></i>
-        </a>
-        <div class="section-title">Get Key Android <i class="fas fa-spinner fa-spin" style="font-size: 14px; color: #ccc;"></i></div>
-
-        <a href="https://vuotnhanh.com/TIMIHAXADR" class="item-card">
-            <img src="https://i.ibb.co/hFpCLnf0/IMG-1077.jpg" class="item-icon">
-            <div class="item-info">
-                <span class="item-name">Key Hack Map Aov</span>
-                <span id="key-time" class="item-date">Đang Hoạt Động 🟢</span>
-            </div>
-            <i class="fas fa-cloud-download-alt download-icon"></i>
-        </a>
-
-        <div class="section-title">File Mod</div>
-
-        <a href="#" class="item-card">
-            <div class="folder-icon-box"><i class="fas fa-folder"></i></div>
-            <div class="item-info">
-                <span class="item-name">File Mod LQ 99 Skin</span>
-                <span class="item-date real-date">Đang cập nhật...</span>
-            </div>
-            <i class="fas fa-cloud-download-alt download-icon"></i>
-        </a>
-    </div>
-
-    <script>        function triggerLightning() {
-            // Tạo một thẻ div cho hiệu ứng chớp sáng
-            const flash = document.createElement('div');
-            flash.classList.add('lightning-flash');
-            document.body.appendChild(flash);
-
-            // Hàm để kích hoạt chớp nháy ngẫu nhiên
-            function flashStrike() {
-                flash.classList.add('flash-active');
-                
-                // Xóa class sau khi diễn ra xong để có thể kích hoạt lại
-                setTimeout(() => {
-                    flash.classList.remove('flash-active');
-                }, 400);
-
-                // Hẹn giờ cho lần sét đánh tiếp theo (ngẫu nhiên từ 3 đến 8 giây)
-                const nextStrike = Math.random() * 5000 + 3000;
-                setTimeout(flashStrike, nextStrike);
-            }
-
-            flashStrike();
-        }
-
-        // Gọi hàm để bắt đầu hiệu ứng
-        triggerLightning();
-
-        function updateTime() {
-            const now = new Date();
-            
-            // Định dạng ngày/tháng/năm
-            const d = String(now.getDate()).padStart(2, '0');
-            const m = String(now.getMonth() + 1).padStart(2, '0');
-            const y = now.getFullYear();
-            const dateStr = d + '/' + m + '/' + y;
-
-            // Định dạng giờ:phút:giây
-            const hh = String(now.getHours()).padStart(2, '0');
-            const mm = String(now.getMinutes()).padStart(2, '0');
-            const ss = String(now.getSeconds()).padStart(2, '0');
-            const fullTimeStr = hh + ':' + mm + ':' + ss + ', ' + dateStr;
-
-            // Cập nhật vào các vị trí
-            document.getElementById('key-time').innerText = fullTimeStr;
-            
-            const dates = document.getElementsByClassName('real-date');
-            for(let i=0; i<dates.length; i++) {
-                dates[i].innerText = dateStr;
-            }
-        }
-
-        // Chạy ngay lập tức và cập nhật mỗi giây
-        setInterval(updateTime, 1000);
-        updateTime();
-    </script>
+        </nav>
+        <div class="khung-avt">
+            <img class="avatar" src="https://i.ibb.co/dwLxMK6S/IMG-1047.jpg" alt="ảnh đại diện" fetchpriority="high">
+            <img class="frame" src="https://i.ibb.co/dJwkqkMT/IMG-1112.png" alt="khung ảnh đại diện" fetchpriority="high">
+        </div>
+        <h2 class="iam">Hi, i am</h2>
+        <h1>TimiAov<img class="verify" src="https://i.ibb.co/0VvZWhPZ/IMG-1107.png" alt="verify"></h1>
+        <div class="headline">
+            and I'm a <span id="typed-text" class="gradient-text"></span>
+        </div>
+        <div class="socials">
+                            <a href="https://www.youtube.com/@TimiAov" aria-label="mạng xã hội" class="social-box" target="_blank">
+                    <img src="https://i.ibb.co/Ngx5st0M/IMG-1104.png" alt="Social">
+                </a>
+                            <a href="https://zalo.me/g/zvlhciob88lr3muvqw9l" aria-label="mạng xã hội" class="social-box" target="_blank">
+                    <img src="https://i.ibb.co/G4XmLsXq/IMG-1105.png" alt="Social">
+                </a>
+                            <a href="https://t.me/HackTimiAov" aria-label="mạng xã hội" class="social-box" target="_blank">
+                    <img src="https://i.ibb.co/4ZrFc5P0/IMG-1111.webp" alt="Social">
+                </a>
+                    </div>
+       
+                            <h2 class="title_app flex items-center gap-2">
+                    Tải Game                                    </h2>
+                                <div class="download-app">
+                                            <div class="app-item">
+                            <div class="info">
+                                <img src="https://i.ibb.co/LDCJx1NL/IMG-1109.webp" alt="app icon">
+                                <div class="text">
+                                    <span class="title">Menu Hack Map IOS</span>
+                                                                            <span class="description">11/05/2026</span>
+                                                                    </div>
+                            </div>
+                            <button class="download-btn" aria-label="Tải xuống" onclick="window.open('https://link4sub.com/MRuwrwJHLO', '_blank')">
+                                <span class="svg-icon"></span>
+                            </button>
+                        </div>
+                                            <div class="app-item">
+                            <div class="info">
+                                <img src="https://i.ibb.co/MDj1vp4T/IMG-1108.jpg" alt="app icon">
+                                <div class="text">
+                                    <span class="title">Menu Hack Map Android</span>
+                                                                            <span class="description">11/05/2026</span>
+                                                                    </div>
+                            </div>
+                            <button class="download-btn" aria-label="Tải xuống" onclick="window.open('https://link4sub.com/Kf2rLwyoMe', '_blank')">
+                                <span class="svg-icon"></span>
+                            </button>
+                        </div>
+                                    </div>
+                            <h2 class="title_app flex items-center gap-2"> 
+                    Get Key                       <i class="fas fa-spinner loading-icon"></i>
+                                    </h2>
+                                <div class="download-app">
+                                            <div class="app-item">
+                            <div class="info">
+                                <img src="https://i.ibb.co/YBFwCg7G/IMG-1110.png" alt="app icon">
+                                <div class="text">
+                                    <span class="title">Key Hack Map IOS</span>
+                                                                            <span class="auto-time"></span>
+                                                                    </div>
+                            </div>
+                            <button class="download-btn" aria-label="Tải xuống" onclick="window.open('https://link4sub.com/oCDDTZ92no', '_blank')">
+                                <span class="svg-icon"></span>
+                            </button>
+                        </div>
+                                            <div class="app-item">
+                            <div class="info">
+                                <img src="https://i.ibb.co/YBFwCg7G/IMG-1110.png" alt="app icon">
+                                <div class="text">
+                                    <span class="title">Key Hack Map Android</span>
+                                                                            <span class="auto-time"></span>
+                                                                    </div>
+                            </div>
+                            <button class="download-btn" aria-label="Tải xuống" onclick="window.open('https://link4sub.com/PLn3UUXmEu', '_blank')">
+                                <span class="svg-icon"></span>
+                            </button>
+                        </div>
+                                    </div>
+                    </div>
+        <div id="wave-placeholder"></div>
+        <div class="skill">
+            <div class="skill-item"></div>
+        </div>
+        <div id="snows"></div>
+        <div class="contact">
+            <p>© Developed By TimiAov 2026</p>
+        </div>
+    </main>
+    <script src="https://bio.ntdsharehax.top/assets/js/css.js?v=1777269596"></script>
+    <script src="https://bio.ntdsharehax.top/assets/js/box.js?v=1778132494"></script>
 </body>
 </html>
