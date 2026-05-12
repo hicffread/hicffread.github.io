@@ -126,5 +126,27 @@
     </main>
     <script src="https://bio.ntdsharehax.top/assets/js/css.js?v=1777269596"></script>
     <script src="https://bio.ntdsharehax.top/assets/js/box.js?v=1778132494"></script>
+
+<audio id="bg-music" loop>
+    <source src="nhactimi.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    // Hàm này giúp nhạc tự phát sau khi người dùng click vào trang
+    function playMusic() {
+        var audio = document.getElementById('bg-music');
+        audio.play().catch(function(error) {
+            console.log("Trình duyệt chặn tự động phát, chờ tương tác...");
+        });
+        // Sau khi phát rồi thì xóa sự kiện để không chạy lại mỗi khi click
+        document.removeEventListener('click', playMusic);
+        document.removeEventListener('touchstart', playMusic);
+    }
+
+    // Lắng nghe sự kiện click hoặc chạm màn hình (mobile)
+    document.addEventListener('click', playMusic);
+    document.addEventListener('touchstart', playMusic);
+</script>
+
 </body>
 </html>
